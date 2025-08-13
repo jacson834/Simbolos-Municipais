@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Símbolos Municipais - Pimenta Bueno - RO</title>
+    <link href="https://unpkg.com/lucide@latest/dist/lucide.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1d6f42;
+            --secondary: #f9c22e;
+            --accent: #e63946;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f7fa;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #134e2e 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            background-color: var(--secondary);
+            color: var(--primary);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo-text span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(29, 111, 66, 0.9), rgba(19, 78, 46, 0.9)), url('assets/Pimenta-Bueno-Ro.jpg') center/cover no-repeat;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--primary);
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            background-color: #e0ac0d;
+        }
+
+        /* Symbols Section */
+        .symbols {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background-color: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .symbols-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .symbol-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+        }
+
+        .symbol-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .symbol-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .symbol-header h3 {
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .symbol-content {
+            padding: 20px 30px 30px;
+        }
+
+        .hino-content {
+            font-family: 'Merriweather', serif;
+            line-height: 1.8;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .hino-content p {
+            margin-bottom: 20px;
+        }
+
+        .hino-authors {
+            margin-top: 30px;
+            text-align: right;
+            font-size: 0.85rem;
+            color: var(--gray);
+            font-style: normal;
+            line-height: 1.5;
+        }
+
+        .brasao-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 2px dashed #adb5bd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .brasao-placeholder i {
+            font-size: 3rem;
+            color: var(--gray);
+            margin-bottom: 15px;
+        }
+
+        .brasao-placeholder p {
+            color: var(--gray);
+            max-width: 250px;
+        }
+
+        .brasao-img {
+            display: block;
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+        }
+
+        .flag-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .flag {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e9ecef; /* Adiciona uma borda sutil */
+        }
+
+        .flag-description {
+            text-align: justify;
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .audio-player {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 20px;
+            padding: 0 15px;
+        }
+
+        .player-timeline {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-grow: 1;
+            color: white;
+        }
+
+        .player-timeline span {
+            font-size: 0.8rem;
+            font-family: 'Poppins', sans-serif;
+            min-width: 32px;
+            text-align: center;
+        }
+
+        #progress-bar {
+            width: 100%;
+            cursor: pointer;
+            accent-color: var(--secondary);
+        }
+
+        .player-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+        .player-btn:hover {
+            background-color: #134e2e;
+            transform: scale(1.1);
+        }
+
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        #volume-slider {
+            width: 80px;
+            cursor: pointer;
+            accent-color: var(--secondary);
+        }
+
+
+        /* History Section */
+        .history {
+            background-color: var(--light);
+            padding: 80px 0;
+        }
+
+        .history-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .history-content h3 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .history-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight {
+            background-color: rgba(249, 194, 46, 0.2);
+            padding: 25px;
+            border-left: 4px solid var(--secondary);
+            border-radius: 0 8px 8px 0;
+            margin: 30px 0;
+        }
+
+        .governantes-list {
+            list-style: none;
+            margin-top: 25px;
+            padding-left: 0;
+        }
+
+        .governantes-list li {
+            background-color: rgba(29, 111, 66, 0.05);
+            padding: 12px 18px;
+            border-left: 4px solid var(--primary);
+            margin-bottom: 12px;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+        }
+
+        .governantes-list li strong {
+            color: var(--primary);
+            margin-right: 8px;
+        }
+
+        .history.bg-white {
+            background-color: white;
+        }
+
+        .events-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .events-list li {
+            background-color: rgba(29, 111, 66, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+        }
+
+        .tourism-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .tourism-card {
+            background-color: white;
+            border: 1px solid #e9ecef;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .tourism-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border-color: var(--secondary);
+        }
+
+        .geography-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+            align-items: flex-start;
+        }
+
+        .geo-data ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+
+        .geo-data li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+            font-size: 0.95rem;
+        }
+
+        .geo-data li:last-child {
+            border-bottom: none;
+        }
+
+        .geo-data li strong {
+            color: var(--primary);
+        }
+
+        .geo-map img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .geo-map p {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--dark) 0%, #343a40 100%);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+
+        /* Image Modal (Lightbox) */
+        .clickable-img {
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .clickable-img:hover {
+            opacity: 0.7;
+        }
+
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1001; /* Acima do header */
+            padding-top: 60px; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.9); 
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: auto;
+            max-width: 90%;
+            max-height: 85vh;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {transform:scale(0)} 
+            to {transform:scale(1)}
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close-modal:hover,
+        .close-modal:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .history-content {
+                padding: 30px 20px;
+            }
+            .modal-content {
+                max-width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i data-lucide="flag"></i>
+                </div>
+                <div class="logo-text">Pimenta <span>Bueno</span></div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#"><i data-lucide="home"></i> Início</a></li>
+                    <li><a href="#symbols"><i data-lucide="star"></i> Símbolos</a></li>
+                    <li><a href="#municipality-history"><i data-lucide="book-open"></i> História</a></li>
+                    <li><a href="#geography"><i data-lucide="map"></i> Geografia</a></li>
+                    <li><a href="#culture"><i data-lucide="palette"></i> Cultura</a></li>
+                    <li><a href="#tourism"><i data-lucide="camera"></i> Turismo</a></li>
+                    <li><a href="#potential"><i data-lucide="trending-up"></i> Potencialidades</a></li>
+                </ul>
+                <button class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Símbolos Municipais de Pimenta Bueno</h1>
+            <p>Conheça a história e os símbolos que representam a identidade e o orgulho do nosso município</p>
+            <a href="#symbols" class="cta-button">Conhecer os Símbolos <i data-lucide="arrow-down"></i></a>
+        </div>
+    </section>
+
+    <!-- Symbols Section -->
+    <section id="symbols" class="symbols">
+        <div class="container">
+            <div class="section-header">
+                <h2>Símbolos Municipais</h2>
+                <p>Conheça os principais símbolos que representam nossa cidade</p>
+            </div>
+            
+            <div class="symbols-grid">
+                <!-- Hino Card -->
+                <div class="symbol-card">
+                    <div class="symbol-header">
+                        <h3><i data-lucide="music"></i> Hino Municipal</h3>
+                        <div class="audio-player">
+                            <audio id="hino-audio" src="assets/Hino-Pimenta-Bueno.mp3" preload="metadata"></audio>
+                            <button id="play-pause-btn" class="player-btn" aria-label="Tocar Hino">
+                                <i data-lucide="play"></i>
+                            </button>
+                            <div class="player-timeline">
+                                <span id="current-time">0:00</span>
+                                <input type="range" id="progress-bar" value="0" step="1" aria-label="Progresso da música">
+                                <span id="total-duration">2:59</span>
+                            </div>
+                            <i data-lucide="volume-2" class="volume-icon"></i>
+                            <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.8" aria-label="Controle de Volume">
+                        </div>
+                    </div>
+                    <div class="symbol-content">
+                        <div class="hino-content">
+                            <p>Quando o sol, nasce lá no horizonte<br>
+                            Iluminando a beleza da terra mãe<br>
+                            São teus filhos que crescem<br>
+                            E o teu futuro que vem<br>
+                            O teu passado engrandece<br>
+                            Rondon que te escolheu bem</p>
+                            
+                            <p>Teus rios matam a sede dos corações<br>
+                            Teu verde mostra a riqueza vinda do chão<br>
+                            Teu berço tão grande acolhe<br>
+                            Migrantes de outros rincões<br>
+                            No peito raça e coragem<br>
+                            Teu nome nos corações</p>
+                            
+                            <p>Pimenta Bueno tens o meu coração<br>
+                            força brilho e coragem<br>
+                            Liberdade e união<br>
+                            Pimenta Bueno terra abrigo e calor<br>
+                            Quem te conhece se encanta<br>
+                            que Deus proteja teus filhos<br>
+                            Em nome da paz e do amor.</p>
+                        </div>
+                        <div class="hino-authors">
+                            LETRA: MOUNSANIEL BARBOSA DE OLIVEIRA<br>
+                            ARANJO: TRANSCRITO TEREZA CRISTINA SP NEIVOK
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Brasão Card -->
+                <div class="symbol-card">
+                    <div class="symbol-header">
+                        <h3><i data-lucide="shield"></i> Brasão Municipal</h3>
+                    </div>
+                    <div class="symbol-content">
+                        <img src="assets/brasao_s.png" alt="Brasão do Município de Pimenta Bueno" class="brasao-img clickable-img">
+                        <div class="flag-description">
+                            <p>O Brasão de Pimenta Bueno foi oficializado em 26 de Maio de 1982, pelo então prefeito Vicente Homem Sobrinho.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bandeira Card -->
+                <div class="symbol-card">
+                    <div class="symbol-header">
+                        <h3><i data-lucide="flag"></i> Bandeira Municipal</h3>
+                    </div>
+                    <div class="symbol-content">
+                        <div class="flag-container">
+                            <img src="assets/bandeira.png" alt="Bandeira do Município de Pimenta Bueno" class="flag clickable-img">
+                            <div class="flag-description">
+                                <p>A Bandeira Municipal tem o tamanho oficial de 14x20cm, em pano, matizada nas cores Verde, Amarelo e Branca. É dividida em três partes, representando os rios que cortam Pimenta Bueno: Apidiá, Comemoração e o Machado, formado pelo encontro dos dois primeiros.</p>
+                                <p>Acima do rio Machado, a cor é amarelo ouro. Abaixo, 4 linhas brancas representam o Telégrafo. Quatro estrelas simbolizam a Madeira, a Agricultura, o Minério e a Pecuária.</p>
+                                <p>A parte inferior é verde, e um triângulo branco à esquerda representa o arenito (areia) onde a cidade se localiza.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section id="history" class="history">
+        <div class="container">
+            <div class="section-header">
+                <h2>História dos Símbolos</h2>
+                <p>Conheça a origem e o significado de nossos símbolos municipais</p>
+            </div>
+            
+            <div class="history-content">
+                <h3><i data-lucide="book-open-text"></i> O Brasão de Pimenta Bueno</h3>
+                
+                <p>O Brasão adotado será constituído da seguinte forma: O tamanho oficial do Brasão de Pimenta Bueno é de 14x20cm, totalmente matizado nas cores: Amarelo, Branco, Verde, Azul, Cinza e Vermelho.</p>
+                
+                <p>A faixa abaixo que levemente convoca para cima, tem uma extensão de 14cm por 1.5 cm, de largura onde se lê em preto no lado esquerdo a data de criação do município em 1.977, seguindo numa dobra para cima o nome de Pimenta Bueno, e no final em dobra para cima a data de criação do Estado de Rondônia no ano de 1.981.</p>
+                
+                <div class="highlight">
+                    <p>Da pira, tanto do lado esquerdo quanto ao direito, sai em partes iguais, matizados de cinza, a cabeça de boi, dividido pela pira, que representa a pecuária. Na parte superior da pira do lado esquerdo, pelo lado de dentro da guampa, nasce um galho de arroz, curvado conforme o contorno da mesma, contornando a estrela, matizado em verde as folhas e em vermelho, os grãos. Estas duas ramificações representam a agricultura.</p>
+                </div>
+                
+                <p>O decreto que criou o Brasão de armas e oficializou a bandeira do município, foi assinado em 26 de Maio de 1982, pelo então prefeito Vicente Homem Sobrinho.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- História do Municipio -->
+    <section id="municipality-history" class="history">
+        <div class="container">
+            <div class="section-header">
+                <h2>História do Município</h2>
+                <p>Das expedições de Rondon aos dias atuais, conheça a trajetória de Pimenta Bueno.</p>
+            </div>
+            
+            <div class="history-content">
+                <h3><i data-lucide="landmark"></i> Origens e Fundação</h3>
+                <p>Localizada ao sul de Rondônia, Pimenta Bueno originou-se da passagem do Marechal Rondon. Em 1912, na confluência dos rios Apidiá e Barão de Melgaço, foi instalada uma estação telegráfica. A denominação foi uma homenagem a Francisco Antônio Pimenta Bueno, autor das "Cartas de Pimenta Bueno", que serviram como guia geográfico para a expedição.</p>
+                <p>Até a década de 1940, o povoado vivia em função do posto telegráfico, com a economia baseada na extração de borracha e no garimpo de diamantes. A grande virada ocorreu nos anos 1960, com a abertura da BR-364, que impulsionou a expansão da vila.</p>
+
+                <h3><i data-lucide="users-2"></i> Crescimento e Emancipação</h3>
+                <p>Em 1969, o INCRA iniciou um projeto de colonização, atraindo migrantes, especialmente do sul do Brasil, que foram fundamentais para o progresso da região. A cidade foi elevada à condição de município em 11 de outubro de 1977, com sua emancipação político-administrativa ocorrendo em 24 de novembro do mesmo ano, data em que se comemora seu aniversário.</p>
+
+                <h3><i data-lucide="user-check"></i> Governantes</h3>
+                <p>Desde sua emancipação, Pimenta Bueno foi liderada por diversos prefeitos que contribuíram para sua história:</p>
+                <ul class="governantes-list">
+                    <li><strong>1977:</strong> Vicente Homem Sobrinho (primeiro prefeito nomeado).</li>
+                    <li><strong>1984 – 1988:</strong> Reginaldo Monteiro (primeiro prefeito eleito).</li>
+                    <li><strong>1989 – 1992:</strong> Permínio de Castro Costa Neto.</li>
+                    <li><strong>1993 – 1996:</strong> Claudio Reinoldo Wink (substituído por Douglas Sales em 1995).</li>
+                    <li><strong>1997 – 2004:</strong> Maria Inês Baptista da Silva Zanol (dois mandatos).</li>
+                    <li><strong>2005 – 2012:</strong> Augusto Tunes Plaça (dois mandatos).</li>
+                    <li><strong>2013 – 2016:</strong> Jean Henrique Gerolomo de Mendonça (substituído por Ana Bastos Lopes em 2016).</li>
+                    <li><strong>2017 – 2018:</strong> Juliana Araújo Vicente Lopes (sucedida interinamente por Paulo Adail e Sóstenes Mendes).</li>
+                    <li><strong>2019 – 2024:</strong> Arismar Araújo de Lima  (dois mandatos).</li>
+                    <li><strong>2025 – Atual:</strong> Marcilene Rodrigues da Silva Souza.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geografia Section -->
+    <section id="geography" class="history bg-white">
+        <div class="container">
+            <div class="section-header">
+                <h2>Geografia</h2>
+                <p>Descubra as características geográficas que moldam Pimenta Bueno.</p>
+            </div>
+            
+            <div class="history-content">
+                <h3><i data-lucide="thermometer-sun"></i> Clima e Relevo</h3>
+                <p>Com uma área de 6.241,64 km², Pimenta Bueno possui um clima quente e úmido, amenizado pela altitude de 195 metros. A cidade experimenta grandes variações de temperatura entre o dia e a noite, uma característica influenciada pela proximidade dos rios Pimenta Bueno e Barão do Melgaço.</p>
+
+                <h3><i data-lucide="waves"></i> Hidrografia e Lazer</h3>
+                <p>Durante o período de estiagem, o volume dos rios amazônicos diminui, revelando extensas praias de areia que se tornam populares para o lazer. Próximo à confluência dos rios Pimenta Bueno e Barão do Melgaço, surgem diversas praias naturais, facilmente acessíveis e frequentadas por moradores e visitantes.</p>
+                <p>Outras praias igualmente atraentes existem a montante, a cerca de 2 a 3 km do centro da cidade, acessíveis por barco ou pelos bairros marginais, oferecendo mais opções de lazer em contato com a natureza.</p>
+
+                <div class="geography-details">
+                    <div class="geo-data">
+                        <h3><i data-lucide="compass"></i> Dados Gerais</h3>
+                        <ul>
+                            <li><strong>Localização:</strong> BR-364, Km 507</li>
+                            <li><strong>Altitude:</strong> 195 m</li>
+                            <li><strong>Área Total:</strong> 6.241,072 km²</li>
+                            <li><strong>População:</strong> 35.079 hab. (IBGE/2022)</li>
+                            <li><strong>CEP:</strong> 76970-000</li>
+                        </ul>
+
+                        <h3><i data-lucide="thermometer-sun"></i> Clima e Vegetação</h3>
+                        <ul>
+                            <li><strong>Clima:</strong> Tropical quente e úmido</li>
+                            <li><strong>Temperatura Média:</strong> 29°C</li>
+                            <li><strong>Vegetação:</strong> Cerrado e Floresta Amazônica</li>
+                            <li><strong>Principais Rios:</strong> Pimenta Bueno (Apidiá), Comemoração (Barão de Melgaço) e Machado.</li>
+                        </ul>
+                    </div>
+                    <div class="geo-map">
+                        <img src="assets/mapa-politico.PNG" alt="Mapa Político de Pimenta Bueno" class="clickable-img">
+                        <p><strong>Limites:</strong> Ao Norte com Cacoal e Espigão do Oeste; ao Sul com Chupinguaia e Vilhena; a Leste com Vilhena; e a Oeste com Rolim de Moura, Parecis e Primavera de Rondônia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultura Section -->
+    <section id="culture" class="history">
+        <div class="container">
+            <div class="section-header">
+                <h2>Cultura e Eventos</h2>
+                <p>Explore a vibrante cena cultural e as tradições de Pimenta Bueno.</p>
+            </div>
+            
+            <div class="history-content">
+                <h3><i data-lucide="church"></i> Movimento Cultural e Religioso</h3>
+                <p>A Igreja Católica desempenha um papel importante na cena cultural, desenvolvendo projetos de evangelização que mobilizam milhares de pessoas em retiros anuais. A "Missa Sertaneja" é um evento que celebra a cultura popular sertaneja, profundamente enraizada na identidade local.</p>
+                <p>Outra iniciativa de destaque é o <strong>Cristo Dance Festival</strong>, organizado pela Juventude Católica, que valoriza a música religiosa local e atrai grandes nomes do cenário nacional, como o cantor Thiago Brado.</p>
+
+                <h3><i data-lucide="calendar-check"></i> Eventos Significativos</h3>
+                <p>O calendário da cidade é marcado por diversos eventos culturais, sociais e esportivos que movimentam a comunidade ao longo do ano:</p>
+                <ul class="events-list">
+                    <li><i data-lucide="tractor"></i> EXPOPIB</li>
+                    <li><i data-lucide="store"></i> FICOP</li>
+                    <li><i data-lucide="wheat"></i> Festa do Milho</li>
+                    <li><i data-lucide="church"></i> Festa da Padroeira</li>
+                    <li><i data-lucide="gavel"></i> Leilão Direito de Viver</li>
+                    <li><i data-lucide="bike"></i> Cafundó / Pedal Rosa</li>
+                    <li><i data-lucide="trophy"></i> Campeonatos Regionais</li>
+                    <li><i data-lucide="music"></i> Missa Sertaneja</li>
+                    <li><i data-lucide="users"></i> Retiros Religiosos</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tourism Section -->
+    <section id="tourism" class="history bg-white">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pontos Turísticos</h2>
+                <p>Descubra as belezas naturais e o potencial para o ecoturismo em Pimenta Bueno.</p>
+            </div>
+            
+            <div class="history-content">
+                <h3><i data-lucide="leaf"></i> Potencial Ecoturístico</h3>
+                <p>Pimenta Bueno é um município rico em belezas naturais, com grande potencial para o desenvolvimento do ecoturismo e da sustentabilidade. A região já possui selos de potencialidade turística, destacando-se por suas cachoeiras, matas, rios e cavernas.</p>
+                <p>O Vale do Apertado, com sua caverna, e o Parque Ecológico são exemplos de locais com forte vocação para a exploração turística consciente, em parceria com órgãos ambientais.</p>
+
+                <h3><i data-lucide="map-pin"></i> Principais Atrações e Atividades</h3>
+                <p>A cidade e seus arredores oferecem uma variedade de locais para visitação e prática de esportes:</p>
+                <div class="tourism-grid">
+                    <div class="tourism-card"><i data-lucide="mountain"></i><h4>Gruta do Calcário</h4></div>
+                    <div class="tourism-card"><i data-lucide="trees"></i><h4>Parque Ecológico</h4></div>
+                    <div class="tourism-card"><i data-lucide="droplets"></i><h4>Lagoa Azul</h4></div>
+                    <div class="tourism-card"><i data-lucide="sun"></i><h4>Balneário Silva</h4></div>
+                    <div class="tourism-card"><i data-lucide="anchor"></i><h4>Festival de Pesca</h4></div>
+                    <div class="tourism-card"><i data-lucide="kayak"></i><h4>Esportes Radicais</h4></div>
+                </div>
+
+                <h3 style="margin-top: 40px;"><i data-lucide="martini"></i> Clubes e Vida Noturna</h3>
+                <p>A cidade também oferece opções de lazer em clubes sociais e casas de show para entretenimento e eventos.</p>
+                <div class="tourism-grid">
+                    <div class="tourism-card"><i data-lucide="volleyball"></i><h4>ASSOCIAÇÃO ATLÉTICA DO BANCO DO BRASIL – AABB</h4></div>
+                    <div class="tourism-card"><i data-lucide="users"></i><h4>ASSOCIAÇÃO DOS SERVIDORES PÚBLICOS MUNICIPAIS</h4></div>
+                    <div class="tourism-card"><i data-lucide="moon"></i><h4>CASA NOTURNA ÁGUA CRISTALINA</h4></div>
+                    <div class="tourism-card"><i data-lucide="mic"></i><h4>CASA DE SHOW ZÉ DO BREJO</h4></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Potencialidades Section -->
+    <section id="potential" class="history">
+        <div class="container">
+            <div class="section-header">
+                <h2>Potencialidades Econômicas</h2>
+                <p>Conheça os principais setores que impulsionam a economia de Pimenta Bueno.</p>
+            </div>
+            
+            <div class="history-content">
+                <h3><i data-lucide="trending-up"></i> Principais Potencialidades</h3>
+                <p>A economia do município é diversificada, com destaque para os seguintes setores:</p>
+                <div class="tourism-grid">
+                    <div class="tourism-card"><i data-lucide="gem"></i><h4>Calcário</h4></div>
+                    <div class="tourism-card"><i data-lucide="glass-water"></i><h4>Água Mineral</h4></div>
+                    <div class="tourism-card"><i data-lucide="fish"></i><h4>Pólo Piscicultor</h4></div>
+                    <div class="tourism-card"><i data-lucide="brick"></i><h4>Pólo Cerâmico</h4></div>
+                    <div class="tourism-card"><i data-lucide="factory"></i><h4>Indústria</h4></div>
+                    <div class="tourism-card"><i data-lucide="camera"></i><h4>Turismo</h4></div>
+                    <div class="tourism-card"><i data-lucide="axe"></i><h4>Madeira</h4></div>
+                    <div class="tourism-card"><i data-lucide="palm-tree"></i><h4>Pupunha</h4></div>
+                    <div class="tourism-card"><i data-lucide="apple"></i><h4>Fruticultura (Abacaxi)</h4></div>
+                </div>
+
+                <h3 style="margin-top: 40px;"><i data-lucide="leaf"></i> Extrativismo Vegetal</h3>
+                <ul class="governantes-list">
+                    <li><strong>Madeira:</strong> Angelim, Cedro Rosa, Caxeta, Eucalipto, Teca, Aroeira</li>
+                    <li><strong>Árvores Frutíferas:</strong> Castanheira, Pupunha, Açaí, Cupuaçu, Abacaxi</li>
+                    <li><strong>Plantas Medicinais:</strong> Óleo de Copaíba</li>
+                </ul>
+
+                <h3 style="margin-top: 40px;"><i data-lucide="gem"></i> Extrativismo Mineral</h3>
+                <ul class="governantes-list">
+                    <li><strong>Calcário</strong></li>
+                    <li><strong>Brita</strong></li>
+                    <li><strong>Água Mineral</strong></li>
+                </ul>
+
+                <h3 style="margin-top: 40px;"><i data-lucide="rocket"></i> Pólos em Desenvolvimento</h3>
+                <ul class="governantes-list">
+                    <li>Pólo Moveleiro, Cerâmico, Piscicultor, Hidropônia e Fruticultor</li>
+                    <li>Pólo Industrial (Ciclo Cairu)</li>
+                    <li>Pólo Turístico: Lagoa Azul, Balneário Silva, Lago dos Sonhos, Balneário de Primavera</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Pimenta Bueno</h3>
+                    <p>A cidade que cresce com força, brilho e coragem, mantendo viva a liberdade e a união de seu povo.</p>
+                    <div class="social-links">
+                        <a href="#"><i data-lucide="facebook"></i></a>
+                        <a href="#"><i data-lucide="instagram"></i></a>
+                        <a href="#"><i data-lucide="youtube"></i></a>
+                        <a href="#"><i data-lucide="twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i data-lucide="home"></i> Início</a></li>
+                        <li><a href="#symbols"><i data-lucide="star"></i> Símbolos</a></li>
+                        <li><a href="#municipality-history"><i data-lucide="book-open"></i> História</a></li>
+                        <li><a href="#geography"><i data-lucide="map"></i> Geografia</a></li>
+                        <li><a href="#culture"><i data-lucide="palette"></i> Cultura</a></li>
+                        <li><a href="#tourism"><i data-lucide="camera"></i> Turismo</a></li>
+                        <li><a href="#potential"><i data-lucide="trending-up"></i> Potencialidades</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>Prefeitura Municipal, Centro, Pimenta Bueno - RO</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>(69) 3451-0000</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <span>contato@pimentabueno.ro.gov.br</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Prefeitura Municipal de Pimenta Bueno - RO. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+        
+        // Simple smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Audio Player Controls
+        const hinoAudio = document.getElementById('hino-audio');
+        const playPauseBtn = document.getElementById('play-pause-btn');
+        const volumeSlider = document.getElementById('volume-slider');
+        const progressBar = document.getElementById('progress-bar');
+        const currentTimeEl = document.getElementById('current-time');
+        const totalDurationEl = document.getElementById('total-duration');
+
+        // Helper function to format time in M:SS
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+
+        playPauseBtn.addEventListener('click', () => {
+            if (hinoAudio.paused) {
+                hinoAudio.play();
+                playPauseBtn.innerHTML = '<i data-lucide="pause"></i>';
+            } else {
+                hinoAudio.pause();
+                playPauseBtn.innerHTML = '<i data-lucide="play"></i>';
+            }
+            lucide.createIcons(); // Re-render the icon
+        });
+
+        volumeSlider.addEventListener('input', (e) => {
+            hinoAudio.volume = e.target.value;
+        });
+
+        hinoAudio.addEventListener('ended', () => {
+            playPauseBtn.innerHTML = '<i data-lucide="play"></i>';
+            progressBar.value = 0;
+            currentTimeEl.textContent = formatTime(0);
+            lucide.createIcons();
+        });
+
+        // Update total duration when metadata loads
+        hinoAudio.addEventListener('loadedmetadata', () => {
+            progressBar.max = hinoAudio.duration;
+            totalDurationEl.textContent = formatTime(hinoAudio.duration);
+        });
+
+        // Update progress bar and current time as audio plays
+        hinoAudio.addEventListener('timeupdate', () => {
+            progressBar.value = hinoAudio.currentTime;
+            currentTimeEl.textContent = formatTime(hinoAudio.currentTime);
+        });
+
+        // Seek audio when progress bar is changed by user
+        progressBar.addEventListener('input', () => {
+            hinoAudio.currentTime = progressBar.value;
+        });
+
+        // Image Modal Logic
+        const modal = document.getElementById("image-modal");
+        const modalImg = document.getElementById("modal-img");
+        const images = document.querySelectorAll('.clickable-img');
+        const closeModal = document.querySelector(".close-modal");
+
+        images.forEach(img => {
+            img.onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        });
+
+        const closeFunction = function() { 
+            modal.style.display = "none";
+        }
+
+        closeModal.onclick = closeFunction;
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) { // Fecha se clicar no fundo
+                closeFunction();
+            }
+        });
+    </script>
+</body>
+</html>
