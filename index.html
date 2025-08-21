@@ -403,12 +403,42 @@
         }
 
         .governantes-list li {
+            display: flex;
+            align-items: center;
+            gap: 25px;
             background-color: rgba(29, 111, 66, 0.05);
-            padding: 12px 18px;
+            padding: 20px;
             border-left: 4px solid var(--primary);
-            margin-bottom: 12px;
-            border-radius: 0 8px 8px 0;
+            margin-bottom: 20px;
+            border-radius: 8px;
             font-size: 0.95rem;
+        }
+
+        .prefeito-foto,
+        .prefeito-foto-placeholder {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            border: 3px solid rgba(29, 111, 66, 0.2);
+        }
+
+        .prefeito-foto {
+            object-fit: cover;
+            background-color: #e9ecef;
+        }
+
+        .prefeito-foto-placeholder {
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+        }
+
+        .prefeito-foto-placeholder i {
+            width: 80px;
+            height: 80px;
         }
 
         .governantes-list li strong {
@@ -569,6 +599,16 @@
             gap: 12px;
         }
 
+        .contact-item a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-item a:hover {
+            color: var(--secondary);
+        }
+
         .social-links {
             display: flex;
             gap: 15px;
@@ -686,6 +726,12 @@
             .section-header h2 {
                 font-size: 2rem;
             }
+
+            .governantes-list li {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
         }
 
         @media (max-width: 576px) {
@@ -711,9 +757,7 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <div class="logo-icon">
-                    <i data-lucide="flag"></i>
-                </div>
+                <img src="assets/bandeira.png" alt="Bandeira de Pimenta Bueno" style="height: 40px; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                 <div class="logo-text">Pimenta <span>Bueno</span></div>
             </div>
             <nav>
@@ -724,7 +768,6 @@
                     <li><a href="#geography"><i data-lucide="map"></i> Geografia</a></li>
                     <li><a href="#culture"><i data-lucide="palette"></i> Cultura</a></li>
                     <li><a href="#tourism"><i data-lucide="camera"></i> Turismo</a></li>
-                    <li><a href="#potential"><i data-lucide="trending-up"></i> Potencialidades</a></li>
                 </ul>
                 <button class="mobile-menu-btn">
                     <i data-lucide="menu"></i>
@@ -854,7 +897,9 @@
                     <p>Da pira, tanto do lado esquerdo quanto ao direito, sai em partes iguais, matizados de cinza, a cabeça de boi, dividido pela pira, que representa a pecuária. Na parte superior da pira do lado esquerdo, pelo lado de dentro da guampa, nasce um galho de arroz, curvado conforme o contorno da mesma, contornando a estrela, matizado em verde as folhas e em vermelho, os grãos. Estas duas ramificações representam a agricultura.</p>
                 </div>
                 
-                <p>O decreto que criou o Brasão de armas e oficializou a bandeira do município, foi assinado em 26 de Maio de 1982, pelo então prefeito Vicente Homem Sobrinho.</p>
+                <p>O decreto que criou o Brasão de armas e oficializou a bandeira do município foi assinado em 26 de Maio de 1982, pelo então prefeito Vicente Homem Sobrinho.</p>
+
+                <p style="font-size: 0.9rem; color: var(--gray); margin-top: 20px; text-align: right;"><em>Fonte: <a href="https://pimentabueno.ro.gov.br/" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">Site Oficial da Prefeitura</a></em></p>
             </div>
         </div>
     </section>
@@ -879,16 +924,46 @@
                 <h3><i data-lucide="user-check"></i> Governantes</h3>
                 <p>Desde sua emancipação, Pimenta Bueno foi liderada por diversos prefeitos que contribuíram para sua história:</p>
                 <ul class="governantes-list">
-                    <li><strong>1977:</strong> Vicente Homem Sobrinho (primeiro prefeito nomeado).</li>
-                    <li><strong>1984 – 1988:</strong> Reginaldo Monteiro (primeiro prefeito eleito).</li>
-                    <li><strong>1989 – 1992:</strong> Permínio de Castro Costa Neto.</li>
-                    <li><strong>1993 – 1996:</strong> Claudio Reinoldo Wink (substituído por Douglas Sales em 1995).</li>
-                    <li><strong>1997 – 2004:</strong> Maria Inês Baptista da Silva Zanol (dois mandatos).</li>
-                    <li><strong>2005 – 2012:</strong> Augusto Tunes Plaça (dois mandatos).</li>
-                    <li><strong>2013 – 2016:</strong> Jean Henrique Gerolomo de Mendonça (substituído por Ana Bastos Lopes em 2016).</li>
-                    <li><strong>2017 – 2018:</strong> Juliana Araújo Vicente Lopes (sucedida interinamente por Paulo Adail e Sóstenes Mendes).</li>
-                    <li><strong>2019 – 2024:</strong> Arismar Araújo de Lima  (dois mandatos).</li>
-                    <li><strong>2025 – Atual:</strong> Marcilene Rodrigues da Silva Souza.</li>
+                    <li>
+                        <img src="assets/prefeitos/prefeito-vicente-sobrinho.jpg" alt="Foto do Prefeito Claudio Reinoldo Wink" class="prefeito-foto">
+                        <div><strong>1977:</strong> Vicente Homem Sobrinho (primeiro prefeito nomeado).</div>
+                    </li>
+                    <li>
+                        <img src="assets/prefeitos/prefeito-reginaldo-monteiro.jpg" alt="Foto do Prefeito Claudio Reinoldo Wink" class="prefeito-foto">
+                        <div><strong>1984 – 1988:</strong> Reginaldo Monteiro (primeiro prefeito eleito).</div>
+                    </li>
+                    <li>
+                        <img src="assets/prefeitos/prefeito-permínio-de-castro-costa-neto.jpg" alt="Foto do Prefeito Claudio Reinoldo Wink" class="prefeito-foto">
+                        <div><strong>1989 – 1992:</strong> Permínio de Castro Costa Neto.</div>
+                    </li>
+                    <li>
+                        <img src="assets/prefeitos/prefeito-claudio-reinoldo-wink.jpg" alt="Foto do Prefeito Claudio Reinoldo Wink" class="prefeito-foto">
+                        <div><strong>1993 – 1996:</strong> Claudio Reinoldo Wink (substituído por Douglas Sales em 1995).</div>
+                    </li>
+                    <li>
+                        <img src="assets/prefeitos/prefeita-maria-ines.jpg" alt="Foto da Prefeita Maria Inês Baptista da Silva Zanol" class="prefeito-foto">
+                        <div><strong>1997 – 2004:</strong> Maria Inês Baptista da Silva Zanol (dois mandatos).</div>
+                    </li>
+                    <li>
+                        <img src="assets/prefeitos/prefeito-augusto-placa.jpg" alt="Foto do Prefeito Augusto Tunes Plaça" class="prefeito-foto">
+                        <div><strong>2005 – 2012:</strong> Augusto Tunes Plaça (dois mandatos).</div>
+                    </li>
+                    <li>
+                        <img src="assets/prefeitos/prefeito-jean-henrique.jpg" alt="Foto do Prefeito Jean Henrique Gerolomo de Mendonça" class="prefeito-foto">
+                        <div><strong>2013 – 2016:</strong> Jean Henrique Gerolomo de Mendonça (substituído por Ana Bastos Lopes em 2016).</div>
+                    </li>
+                    <li>
+                        <img src="assets/prefeitos/prefeita-juliana-araujo.jpg" alt="Foto da Prefeita Juliana Araújo Vicente Lopes" class="prefeito-foto">
+                        <div><strong>2017 – 2018:</strong> Juliana Araújo Vicente Lopes (sucedida interinamente por Paulo Adail e Sóstenes Mendes).</div>
+                    </li>
+                    <li>
+                        <img src="assets/prefeitos/prefeito-arismar-araujo.jpg" alt="Foto do Prefeito Arismar Araújo de Lima" class="prefeito-foto">
+                        <div><strong>2019 – 2024:</strong> Arismar Araújo de Lima  (dois mandatos).</div>
+                    </li>
+                    <li>
+                        <img src="assets/prefeitos/prefeita-marcilene-rodrigues.jpg" alt="Foto da Prefeita Marcilene Rodrigues da Silva Souza" class="prefeito-foto">
+                        <div><strong>2025 – Atual:</strong> Marcilene Rodrigues da Silva Souza.</div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -1061,10 +1136,10 @@
                     <h3>Pimenta Bueno</h3>
                     <p>A cidade que cresce com força, brilho e coragem, mantendo viva a liberdade e a união de seu povo.</p>
                     <div class="social-links">
-                        <a href="#"><i data-lucide="facebook"></i></a>
-                        <a href="#"><i data-lucide="instagram"></i></a>
-                        <a href="#"><i data-lucide="youtube"></i></a>
-                        <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="https://www.facebook.com/PrefeituradePimentaBueno" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                        <a href="https://www.instagram.com/prefeiturapb/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="https://www.youtube.com/@PrefeituradePimentaBueno" target="_blank" rel="noopener noreferrer" aria-label="Youtube"><i data-lucide="youtube"></i></a>
+                        <a href="https://pimentabueno.ro.gov.br/site/" target="_blank" rel="noopener noreferrer" aria-label="Site Oficial"><i data-lucide="globe"></i></a>
                     </div>
                 </div>
                 
@@ -1086,22 +1161,29 @@
                     <div class="contact-info">
                         <div class="contact-item">
                             <i data-lucide="map-pin"></i>
-                            <span>Prefeitura Municipal, Centro, Pimenta Bueno - RO</span>
+                            <a href="https://www.google.com.br/maps/place/Prefeitura+de+Pimenta+Bueno/@-11.6705596,-61.188556,213m/data=!3m1!1e3!4m6!3m5!1s0x93b7e5d11ca56f83:0x57d5df651de4f8c3!8m2!3d-11.6708446!4d-61.1884997!16s%2Fg%2F1tdx0mq7?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MDgxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+                                <span>Prefeitura Municipal, Bairro Pioneiros, Pimenta Bueno - RO</span>
+                            </a>
                         </div>
                         <div class="contact-item">
                             <i data-lucide="phone"></i>
-                            <span>(69) 3451-0000</span>
+                            <span>
+                                <a href="https://wa.me/5569981162254" target="_blank" rel="noopener noreferrer">(69) 98116-2254</a> e
+                                <a href="https://wa.me/5569981699989" target="_blank" rel="noopener noreferrer">(69) 98169-9989</a>
+                            </span>
                         </div>
                         <div class="contact-item">
-                            <i data-lucide="mail"></i>
-                            <span>contato@pimentabueno.ro.gov.br</span>
+                            <i data-lucide="globe"></i>
+                            <a href="https://pimentabueno.ro.gov.br/site/" target="_blank" rel="noopener noreferrer">
+                                <span>www.pimentabueno.ro.gov.br/site</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Prefeitura Municipal de Pimenta Bueno - RO. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Prefeitura Municipal de Pimenta Bueno - RO. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
